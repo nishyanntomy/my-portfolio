@@ -1,46 +1,96 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import newMePage from "@/assets/images/newme.png";
+import grimePage from "@/assets/images/grime.png";
+import getfitgoPage from "@/assets/images/getfitgo.png";
+import Image from "next/image";
+import CheckCircleIcon from '@/assets/icons/check-circle.svg';
+import ArrowpRightIcon from '@/assets/icons/arrow-up-right.svg';
+import GrainImage from '@/assets/images/grain.jpg';
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
-    results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
-    ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
+    company: "NewMe Fashion",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "Online Retail App – Fast, Fluid, Fashion-Forward",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Built with React, TypeScript, and Next.js for speed and scalability" },
+      { title: "Developed dynamic product pages and seamless cart flow" },
+      { title: "Implemented fluid, responsive components for cross-device support" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://newme.asia/?srsltid=AfmBOorf5NtncyiQjXXgjgogOFl50Fb8m1bRW00Vwtb6A5U6eXYCgwf9",
+    image: newMePage,
+  },
+  {
+    company: "GRIME",
+    year: "2023",
+    title: "Graphical Image Manipulation and Enhancement using JAVA",
+    results: [
+      { title: "Built an interactive image editor with Java Swing and MVVM architecture" },
+      { title: "Applied OOP principles and command patterns for clean, modular de" },
+      { title: "Ensured reliability through JUnit tests with mocks and TDD practices" },
+    ],
+    link: "https://github.com/nishyanntomy/GRIME",
+    image: grimePage,
+  },
+  {
+    company: "Get Fit Go",
+    year: "2024",
+    title: "Fitness Application - SQL",
+    results: [
+      { title: "Designed MySQL schema with stored procedures, events, and triggers" },
+      { title: "Built RESTful APIs using Flask and MVC architecture" },
+      { title: "Developed React frontend with reusable components and state management" },
+    ],
+    link: "https://github.com/nishyanntomy/getFitGOFrontEnd",
+    image: getfitgoPage,
   },
 ];
 
 export const ProjectsSection = () => {
-  return <div>Projects Section</div>;
+  return <section className="pb-16">
+    <div className="container">
+      <div className="flex justify-center">
+        <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Real-world Results</p>
+      </div>
+      <h2 className="font-serif text-3xl text-center mt-6">Featured Projects</h2>
+      <p className="text-center text-white/60 mt-4">See how I tranformed concepts into engaging digital experiences.</p>
+      <div className="flex flex-col mt-10 gap-20">
+        {portfolioProjects.map(project => (
+          <div className="bg-gray-800 rounded-3xl relative overflow-hidden z-0 after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 after:pointer-events-none" key={project.title}>
+            <div className="absolute inset-0 -z-10 opacity-5" style={{
+              backgroundImage: `url(${GrainImage.src})`
+            }}>
+            </div>
+
+            <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
+              <span>{project.company}</span>
+              <span>&bull;</span>
+              <span>{project.year}</span>
+            </div>
+            <h3 className="font-serif text-2xl mt-2">{project.title}</h3>
+            <hr className="border-t-2 border-white/5 mt-4" />
+            <ul className="flex flex-col gap-4 mt-4">
+              {project.results.map(result => (
+                <li className="flex gap-2 text-sm text-white/50">
+                  <CheckCircleIcon className="size-5" />
+                  <span>{result.title}</span>
+                </li>
+              ))}
+
+            </ul>
+            {project.link &&
+              (
+                <a href={project.link}>
+                  <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                    <span>View Project</span>
+                    <ArrowpRightIcon className='size-4' />
+                  </button>
+                </a>
+              )}
+            <Image className="mt-8 -mb-7 rounded-t-3xl -p-3" src={project.image} alt={project.title} />
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>;
 };
