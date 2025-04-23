@@ -8,8 +8,8 @@ const calistoga = Calistoga({subsets:['latin'], variable:"--font-serif", weight:
 
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Created with the help of Frontend Tribe",
+  title: "Nishy Ann Tomy",
+  description: "Full-stack developer | MS CS @ Northeastern",
 };
 
 export default function RootLayout({
