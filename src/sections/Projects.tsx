@@ -17,7 +17,7 @@ const portfolioProjects = [
       { title: "Implemented fluid, responsive components for cross-device support" },
     ],
     link: "https://newme.asia/?srsltid=AfmBOorf5NtncyiQjXXgjgogOFl50Fb8m1bRW00Vwtb6A5U6eXYCgwf9",
-    image: newMePage,
+    image: "/images/newme.png",
   },
   {
     company: "Get Fit Go",
@@ -29,7 +29,7 @@ const portfolioProjects = [
       { title: "Developed React frontend with reusable components and state management" },
     ],
     link: "https://github.com/nishyanntomy/getFitGOFrontEnd",
-    image: getfitgoPage,
+    image: "/images/getfitgo.png",
   },
   {
     company: "GRIME",
@@ -41,7 +41,7 @@ const portfolioProjects = [
       { title: "Ensured reliability through JUnit tests with mocks and TDD practices" },
     ],
     link: "https://github.com/nishyanntomy/GRIME",
-    image: grimePage,
+    image: "/images/grime.png",
   },
 ];
 
@@ -94,7 +94,7 @@ export const ProjectsSection = () => {
                     )}
                 </div>
                 <div className="relative">
-                  <Image className="mt-8 -mb-7 -p-3 rounded-t-3xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none lg:-p-3" src={project.image} alt={project.title} />
+                  <img className="mt-8 -mb-7 -p-3 rounded-t-3xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none lg:-p-3" src={project.image} alt={project.title} />
                 </div>
               </div>
             </div>

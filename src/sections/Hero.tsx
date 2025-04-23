@@ -1,6 +1,5 @@
 "use client";
 
-import profileImage from '@/assets/images/nishy.jpeg';
 import Image from "next/image";
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import StarIcon from '@/assets/icons/star.svg';
@@ -50,10 +49,10 @@ export const HeroSection = () => {
 
         </div>
         <div className='container'>
-          <div className='flex flex-col items-center -space-y-10'>
+          <div className='flex flex-col items-center -space-y-8'>
 
-            <Image
-              src={profileImage}
+            <img
+              src="/images/nishy.jpeg"
               alt="Nishy's Profile Picture"
               className="w-48 h-48 bg-gray-950 border border-gray-800 rounded-full shadow-lg object-cover"
             />
