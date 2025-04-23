@@ -21,6 +21,7 @@ const config: Config = {
       },
     },
     extend: {
+      scrollBehavior: ['responsive'], 
       fontFamily: {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',

@@ -73,6 +73,7 @@ export const frameworksAndTools = [
 
 export const SkillsSection = () => {
     return (
+        <section id="skills">
         <div className="container">
             <div className="flex justify-center">
                 <h2 className="font-serif text-3xl md:text-5xl text-center my-6">Skills</h2>
@@ -139,7 +140,7 @@ export const SkillsSection = () => {
                     ))}
                 </div>
             </CardContent>
-            {/* </Card> */}
         </div>
+        </section>
     );
 };
