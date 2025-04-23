@@ -54,7 +54,10 @@ export const ProjectsSection = () => {
       <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">Featured Projects</h2>
       <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">See how I tranformed concepts into engaging digital experiences.</p>
       <div className="md:mt-20 flex flex-col mt-10 gap-20">
-        {portfolioProjects.map(project => (
+        {portfolioProjects.map((project, projectIndex) => (
+          <div className="sticky top-16" style={{
+            top: `calc(64px + ${projectIndex*40}px`
+          }}>
           <div className="bg-gray-800 rounded-3xl relative overflow-hidden z-0 after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none" key={project.title}>
             <div className="absolute inset-0 -z-10 opacity-5" style={{
               backgroundImage: `url(${GrainImage.src})`
@@ -93,6 +96,7 @@ export const ProjectsSection = () => {
             <Image className="mt-8 -mb-7 -p-3 rounded-t-3xl lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none lg:-p-3" src={project.image} alt={project.title} />
             </div>
             </div>
+          </div>
           </div>
         ))}
       </div>
