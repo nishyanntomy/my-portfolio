@@ -9,8 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iconify/icons-devicon": "^1.2.17",
+    "@iconify/icons-file-icons": "^1.2.3",
+    "@iconify/icons-logos": "^1.2.36",
+    "@iconify/icons-skill-icons": "^1.2.1",
+    "@iconify/icons-vscode-icons": "^1.2.29",
+    "@iconify/react": "^5.2.1",
     "@svgr/webpack": "^8.1.0",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.3.21",
+    "iconify": "^1.4.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
