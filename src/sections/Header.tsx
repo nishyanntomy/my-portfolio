@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const navItems = [
   { id: "home", label: "Home" },
-  { id: "projects-sentinel", label: "Projects" },
+  { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
 ];
@@ -37,9 +37,14 @@ export const Header = () => {
     <div className="flex justify-center items-center fixed top-3 w-full z-10">
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         {navItems.map(({ id, label }) => (
-          <a
+          <button
             key={id}
-            href={`#${id}`}
+            onClick={() => {
+              const section = document.getElementById(id);
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
             className={`nav-item ${
               activeId === id
                 ? "bg-white text-gray-900"
@@ -47,7 +52,7 @@ export const Header = () => {
             }`}
           >
             {label}
-          </a>
+          </button>
         ))}
       </nav>
     </div>

@@ -46,8 +46,8 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  return <section id="projects" className="pb-16 lg:py-24">
-    <div id="projects-sentinel" className="h-1"></div>
+  return <section className="pb-16 lg:py-24">
+    <div id="projects" className="h-1"></div>
     <div className="container">
       <div className="flex justify-center">
         <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">Real-world Results</p>
