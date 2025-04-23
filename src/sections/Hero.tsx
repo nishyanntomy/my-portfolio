@@ -1,9 +1,8 @@
 "use client";
 
-import memojiImage from '@/assets/images/memoji-computer.png';
+import profileImage from '@/assets/images/nishy.jpeg';
 import Image from "next/image";
 import ArrowDown from '@/assets/icons/arrow-down.svg';
-import grainImage from '@/assets/images/grain.jpg';
 import StarIcon from '@/assets/icons/star.svg';
 import SparkleIcon from '@/assets/icons/sparkle.svg';
 import { HeroOrbit } from '@/components/HeroOrbit';
@@ -13,7 +12,6 @@ export const HeroSection = () => {
     <section id="home">
       <div className='py-32 md:py-48 lg:py-60 overflow-x-clip'>
         <div className='absolute inset-0 pointer-events-none z-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
-          {/* <div className='absolute inset-0 -z-30 opacity-5' style={{ backgroundImage: `url(${grainImage.src})` }}></div> */}
           <div className='size-[620px] hero-ring'></div>
           <div className='size-[820px] hero-ring'></div>
           <div className='size-[1020px] hero-ring'></div>
@@ -52,9 +50,13 @@ export const HeroSection = () => {
 
         </div>
         <div className='container'>
-          <div className='flex flex-col items-center'>
+          <div className='flex flex-col items-center -space-y-10'>
 
-            <Image src={memojiImage} className='size-[200px]' alt="Person peeking from behind laptop" />
+            <Image
+              src={profileImage}
+              alt="Nishy's Profile Picture"
+              className="w-48 h-48 bg-gray-950 border border-gray-800 rounded-full shadow-lg object-cover"
+            />
             <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
               <div className='bg-green-500 size-2.5 rounded-full relative'>
                 <div className='bg-green-500 absolute inset-0 rounded-full animate-ping-large'></div>
@@ -83,11 +85,11 @@ export const HeroSection = () => {
               <ArrowDown className="size-4" />
             </button>
             <button onClick={() => {
-                const section = document.getElementById('contact');
-                if (section) {
-                  section.scrollIntoView({ behavior: 'smooth' });
-                }
-              }} className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
+              const section = document.getElementById('contact');
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+              }
+            }} className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
               <span>👋</span>
               <span className='font-semibold p'>Let's Connect</span>
             </button>
