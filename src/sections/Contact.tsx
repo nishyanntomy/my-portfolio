@@ -1,5 +1,4 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from '@/assets/images/grain.jpg';
 
 export const ContactSection = () => {
   return (
@@ -11,7 +10,7 @@ export const ContactSection = () => {
               <div>
                 <h2 className="font-serif text-2xl md:text-3xl">Open to New Opportunities</h2>
                 <p className="text-sm mt-2 md:text-base">
-                  I’m currently exploring new grad software engineering roles! If you think I’d be a good fit for your team—or just want to chat tech or projects, feel free to reach out—I'd love to connect!
+                  {"I’m currently exploring new grad software engineering roles! If you think I’d be a good fit for your team—or just want to chat tech or projects, feel free to reach out—I'd love to connect!"}
                 </p>
               </div>
               <div className="z-10 relative">

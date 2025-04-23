@@ -56,7 +56,7 @@ export const ProjectsSection = () => {
       <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">See how I tranformed concepts into engaging digital experiences.</p>
       <div className="md:mt-20 flex flex-col mt-10 gap-20">
         {portfolioProjects.map((project, projectIndex) => (
-          <div className="sticky top-16" style={{
+          <div key={project.title} className="sticky top-16" style={{
             top: `calc(64px + ${projectIndex * 40}px`
           }}>
             <div className="bg-gray-800 rounded-3xl relative overflow-hidden z-0 after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none" key={project.title}>
@@ -76,7 +76,7 @@ export const ProjectsSection = () => {
                   <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map(result => (
-                      <li className="flex gap-2 text-sm md:text-base text-white/50">
+                      <li key={result.title} className="flex gap-2 text-sm md:text-base text-white/50">
                         <CheckCircleIcon className="size-5 md:size-6" />
                         <span>{result.title}</span>
                       </li>

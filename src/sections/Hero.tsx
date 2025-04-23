@@ -67,7 +67,7 @@ export const HeroSection = () => {
           </div>
 
           <div className='max-w-xl mx-auto'>
-            <h1 className='font-serif text-3xl md:text-5xl  text-center mt-8 tracking-wide'>Hi, I'm Nishy.</h1>
+            <h1 className='font-serif text-3xl md:text-5xl  text-center mt-8 tracking-wide'>{"Hi, I'm Nishy."}</h1>
             <p className='mt-4 text-center text-white/60 md:text-lg'>Full-stack developer | MS CS @ Northeastern | Spring 2025 grad</p>
             <p className='mt-1 text-center text-white/60 md:text-lg'>Looking for new grad roles where I can build fast, clean, and meaningful software.</p>
           </div>
@@ -91,7 +91,7 @@ export const HeroSection = () => {
               }
             }} className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
               <span>👋</span>
-              <span className='font-semibold p'>Let's Connect</span>
+              <span className='font-semibold p'>{"Let's Connect"}</span>
             </button>
           </div>
         </div>
